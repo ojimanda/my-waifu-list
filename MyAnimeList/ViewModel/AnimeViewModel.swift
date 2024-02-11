@@ -20,6 +20,20 @@ class AnimeViewModel: ObservableObject {
     
     @Published var toDetail: Bool = false
     
+    
+    // Core Data
+    @Published var favorites: [Favorite] = []
+    
+    let dataService = PersistentController.shared
+    
+    init() {
+        Task {
+            await getWaifus()
+        }
+        getAllFavorites()
+    }
+
+    
     @MainActor
     func getWaifus() async {
         
@@ -67,7 +81,7 @@ class AnimeViewModel: ObservableObject {
     
     func isFavWaifu(waifu: Anime) -> Bool {
         var isFav = false
-        for obj in favWaifus {
+        for obj in favorites {
             if waifu.name == obj.name {
                 isFav = true
             }
@@ -77,12 +91,27 @@ class AnimeViewModel: ObservableObject {
     
     func addOrRemoveWaifu(waifu: Anime) {
         if !isFavWaifu(waifu: waifu) {
-            favWaifus.append(waifu)
+            addFavorites(waifu: waifu)
         } else {
-            favWaifus = favWaifus.filter {
-                $0.name != waifu.name
-            }
+            deleteFavorite(withName: waifu.name)
         }
+    }
+    
+    // function handle core data
+    
+    func getAllFavorites() {
+        favorites = dataService.read()
+    }
+    
+    func addFavorites(waifu: Anime) {
+        dataService.create(waifu: waifu)
+        getAllFavorites()
+    }
+    
+    func deleteFavorite(withName name: String) {
+        
+        dataService.delete(withName: name)
+        getAllFavorites()
     }
     
 }

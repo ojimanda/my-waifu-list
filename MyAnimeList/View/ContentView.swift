@@ -41,9 +41,6 @@ struct ContentView: View {
             }
         }
         .environmentObject(animeViewModel)
-        .task {
-            await animeViewModel.getWaifus()
-        }
     }
 }
 

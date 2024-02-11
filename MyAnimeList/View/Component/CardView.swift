@@ -13,6 +13,7 @@ struct CardView: View {
     @EnvironmentObject var viewModel : AnimeViewModel
     @State private var isShared: Bool = false
     @State private var isDeleted: Bool = false
+    @Environment(\.managedObjectContext) var managedObjectContext
     
     var body: some View {
         
@@ -65,6 +66,7 @@ struct CardView: View {
         .contextMenu(menuItems: {
             Button(role: viewModel.isFavWaifu(waifu: waifu) ? .destructive : .cancel) {
                 viewModel.addOrRemoveWaifu(waifu: waifu)
+
             } label: {
                 if viewModel.isFavWaifu(waifu: waifu) {
                     Label("Remove from Favorite", systemImage: "heart.fill")

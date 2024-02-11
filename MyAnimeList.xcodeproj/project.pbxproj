@@ -22,7 +22,6 @@
 		7419C8AD2B7391B100EEE17A /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7419C8AC2B7391B100EEE17A /* Extension.swift */; };
 		746BD5BA2B77405100B2619F /* DetailWaifu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746BD5B92B77405100B2619F /* DetailWaifu.swift */; };
 		746BD5BC2B777AF100B2619F /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746BD5BB2B777AF100B2619F /* ActivityView.swift */; };
-		74A1D36E2B786CB80001852F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A1D36D2B786CB80001852F /* CoreDataManager.swift */; };
 		74B2301A2B746CEA00C73F0B /* Anime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B230192B746CEA00C73F0B /* Anime.swift */; };
 		74B2301C2B746FF600C73F0B /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B2301B2B746FF600C73F0B /* Favorites.swift */; };
 		74B2301E2B746FFD00C73F0B /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B2301D2B746FFD00C73F0B /* Home.swift */; };
@@ -31,6 +30,8 @@
 		74B230242B763F2100C73F0B /* AnimeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B230232B763F2100C73F0B /* AnimeService.swift */; };
 		74B230262B76405D00C73F0B /* ErrorAnime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B230252B76405D00C73F0B /* ErrorAnime.swift */; };
 		74B230292B7642C100C73F0B /* AnimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B230282B7642C100C73F0B /* AnimeViewModel.swift */; };
+		74E865612B78CBC2002BA54A /* Persistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E865602B78CBC2002BA54A /* Persistent.swift */; };
+		74E865632B78D156002BA54A /* CardFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E865622B78D156002BA54A /* CardFavorite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +52,6 @@
 		7419C8AC2B7391B100EEE17A /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		746BD5B92B77405100B2619F /* DetailWaifu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWaifu.swift; sourceTree = "<group>"; };
 		746BD5BB2B777AF100B2619F /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
-		74A1D36D2B786CB80001852F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		74B230192B746CEA00C73F0B /* Anime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
 		74B2301B2B746FF600C73F0B /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		74B2301D2B746FFD00C73F0B /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -60,6 +60,8 @@
 		74B230232B763F2100C73F0B /* AnimeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeService.swift; sourceTree = "<group>"; };
 		74B230252B76405D00C73F0B /* ErrorAnime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAnime.swift; sourceTree = "<group>"; };
 		74B230282B7642C100C73F0B /* AnimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeViewModel.swift; sourceTree = "<group>"; };
+		74E865602B78CBC2002BA54A /* Persistent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistent.swift; sourceTree = "<group>"; };
+		74E865622B78D156002BA54A /* CardFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFavorite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				7419C8862B73770900EEE17A /* MyAnimeList.xcdatamodeld */,
-				74A1D36D2B786CB80001852F /* CoreDataManager.swift */,
+				74E865602B78CBC2002BA54A /* Persistent.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -181,6 +183,7 @@
 				7419C8982B73822800EEE17A /* CustomTabBar.swift */,
 				74B230212B74859300C73F0B /* CardView.swift */,
 				746BD5BB2B777AF100B2619F /* ActivityView.swift */,
+				74E865622B78D156002BA54A /* CardFavorite.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -302,10 +305,10 @@
 				7419C8A32B738CB300EEE17A /* Constant.swift in Sources */,
 				74B230202B74700200C73F0B /* Profile.swift in Sources */,
 				74B230242B763F2100C73F0B /* AnimeService.swift in Sources */,
-				74A1D36E2B786CB80001852F /* CoreDataManager.swift in Sources */,
 				7419C8882B73770900EEE17A /* MyAnimeList.xcdatamodeld in Sources */,
 				7419C8992B73822800EEE17A /* CustomTabBar.swift in Sources */,
 				746BD5BC2B777AF100B2619F /* ActivityView.swift in Sources */,
+				74E865612B78CBC2002BA54A /* Persistent.swift in Sources */,
 				74B230292B7642C100C73F0B /* AnimeViewModel.swift in Sources */,
 				74B2301E2B746FFD00C73F0B /* Home.swift in Sources */,
 				74B230262B76405D00C73F0B /* ErrorAnime.swift in Sources */,
@@ -316,6 +319,7 @@
 				746BD5BA2B77405100B2619F /* DetailWaifu.swift in Sources */,
 				7419C87C2B73770600EEE17A /* MyAnimeListApp.swift in Sources */,
 				7419C8AD2B7391B100EEE17A /* Extension.swift in Sources */,
+				74E865632B78D156002BA54A /* CardFavorite.swift in Sources */,
 				74B2301A2B746CEA00C73F0B /* Anime.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

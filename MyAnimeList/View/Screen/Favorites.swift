@@ -8,16 +8,33 @@
 import SwiftUI
 
 struct Favorites: View {
+    
+    @EnvironmentObject var viewModel: AnimeViewModel
+    
     var body: some View {
-        ZStack {
-            Color.customBlue100.ignoresSafeArea()
+        NavigationStack {
             
-            Text("Favorites")
+            ZStack {
+                
+                Color.blue100.ignoresSafeArea()
+                
+                List(viewModel.favorites) { favorite in
+                    CardFavorite(waifu: favorite)
+                }
+                .listRowSeparator(.hidden)
+                .listRowSpacing(10)
+            }
+            .navigationTitle("Favorites")
+            .navigationBarBackButtonHidden()
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .transition(.slide)
+        .onAppear() {
+            viewModel.getAllFavorites()
+            print("data is: \(viewModel.favorites)")
+        }
     }
 }
 
-#Preview {
-    Favorites()
-}
+//#Preview {
+//    Favorites()
+//}
