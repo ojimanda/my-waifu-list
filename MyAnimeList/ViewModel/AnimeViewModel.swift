@@ -48,7 +48,7 @@ class AnimeViewModel: ObservableObject {
         }
         
         return waifus.filter { waifu in
-            waifu.name.localizedCaseInsensitiveContains(searchText)
+            waifu.name.localizedCaseInsensitiveContains(searchText) || waifu.anime.localizedCaseInsensitiveContains(searchText)
         }
     }
     
